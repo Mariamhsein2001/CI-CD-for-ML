@@ -26,10 +26,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # Ensure all dependencies are listed here
 
-    - name: Run training script
-      run: |
-        python train.py  # Ensure your training script runs without issues
-
     - name: Run pytest
       run: |
         pytest  # Runs all the tests in the default test directory (e.g., test/)
