@@ -29,3 +29,37 @@ jobs:
     - name: Run pytest
       run: |
         pytest  # Runs all the tests in the default test directory (e.g., test/)
+
+  deploy:
+    needs: test  # Ensure deployment only occurs after tests pass
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      with:
+        version: latest
+
+    - name: Cache Docker layers
+      uses: actions/cache@v2
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      with:
+        version: latest
+
+    - name: Build Docker image
+      run: |
+        docker build -t adult_income .
+
+    - name: Run Docker container for FastAPI app
+      run: |
+        docker run -d -p 5000:5000 adult_income
