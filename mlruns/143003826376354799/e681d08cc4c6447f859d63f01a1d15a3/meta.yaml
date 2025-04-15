@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Desktop/ML%20Pipelines/mlruns/143003826376354799/e681d08cc4c6447f859d63f01a1d15a3/artifacts
+end_time: 1744732615633
+entry_point_name: ''
+experiment_id: '143003826376354799'
+lifecycle_stage: active
+run_id: e681d08cc4c6447f859d63f01a1d15a3
+run_name: omniscient-bee-857
+run_uuid: e681d08cc4c6447f859d63f01a1d15a3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744732569777
+status: 3
+tags: []
+user_id: user
