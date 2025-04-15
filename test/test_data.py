@@ -9,7 +9,7 @@ def load_data():
         "sex", "capital-gain", "capital-loss", "hours-per-week",
         "native-country", "income"
     ]
-    df = pd.read_csv(r"C:\Users\user\Desktop\ML Pipelines\data\adult.data", header=None, names=columns, na_values=" ?")
+    df = pd.read_csv("data/adult.data", header=None, names=columns, na_values=" ?")
     return df
 
 def test_valid_income_labels():
