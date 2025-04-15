@@ -4,3 +4,4 @@ imblearn
 seaborn
 matplotlib
 mlflow
+pytest
