@@ -17,7 +17,7 @@ def load_and_preprocess_data():
     ]
 
     # Load datasets
-    data = pd.read_csv(r"C:\Users\user\Desktop\ML Pipelines\data\adult.data", header=None, names=columns, na_values=" ?")
+    data = pd.read_csv("data/adult.data", header=None, names=columns, na_values=" ?")
     # print(data.head)
     
     # Remove duplicates
